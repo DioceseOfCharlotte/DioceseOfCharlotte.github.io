@@ -1,0 +1,68 @@
+/* #UTILITY LAYOUT
+\*------------------------------------*/
+
+.inline       { display: inline }
+.block        { display: block!important; }
+.inline-block { display: inline-block }
+.table        { display: table }
+.table-cell   { display: table-cell }
+
+.align-baseline { vertical-align: baseline }
+.align-top      { vertical-align: top }
+.align-middle   { vertical-align: middle }
+.align-bottom   { vertical-align: bottom }
+
+.overflow-hidden { overflow: hidden }
+.overflow-scroll { overflow: scroll }
+.overflow-auto   { overflow: auto }
+
+.relative { position: relative }
+.absolute { position: absolute!important; }
+.fixed    { position: fixed }
+.static   { position: static }
+
+.top-0    { top: 0 }
+.right-0  { right: 0 }
+.bottom-0 { bottom: 0 }
+.left-0   { left: 0 }
+
+.z1 { z-index: 1 }
+.z2 { z-index: 2 }
+.z3 { z-index: 3 }
+.z4 { z-index: 4 }
+
+.left  { float: left }
+.right { float: right }
+
+.fit { max-width: 100% }
+.half-height{ height: 50vh; }
+
+
+.sm-show, .md-show, .lg-show {
+  display: none !important
+}
+
+@include sm {
+  .hide\@sm { display: none !important }
+  .show\@sm { display: block !important }
+}
+
+@include md {
+  .hide\@md { display: none !important }
+  .show\@md { display: block !important }
+}
+
+@include lg {
+  .hide\@lg { display: none !important }
+  .show\@lg { display: block !important }
+}
+
+.display-none { display: none !important }
+
+.hide {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
