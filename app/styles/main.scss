@@ -372,7 +372,7 @@ height: 90px;
 /*  If JavaScript is enabled, show the collapse and expand link or button */
 /* line 8, ../components/_houdini.scss */
 .js-houdini .collapse-toggle {
-  display: inline;
+  display: inline-block;
   visibility: visible;
   cursor: pointer;
 }
@@ -493,7 +493,7 @@ height: 90px;
   // border-bottom: 3px solid $lighten-4;
   // margin-bottom: -3px;
   z-index: 1;
-  box-shadow: 0px 5px 0px 0px rgba(255, 255, 255, 0.9);
+  //box-shadow: 0px 5px 0px 0px rgba(255, 255, 255, 0.9);
 }
 
 .section-first {
@@ -502,10 +502,91 @@ height: 90px;
 }
 
 svg.toggle-icon {
-  width: 60px;
-  max-height: 60px;
+  width: 90px;
+  max-height: 90px;
+  padding-top: 10px;
 }
 
 // .card__figure img {
 //   backface-visibility: hidden;
 // }
+
+
+// .collapse-toggle {
+//     opacity: .6;
+//     background-color: rgb(53, 53, 154);
+//     width: 270px;
+//     height: 270px;
+//     display: block!important;
+//     float: left;
+// }
+
+.u-tile {
+    width: 200px;
+    height: 200px;
+    transition: box-shadow .2s cubic-bezier(.4,0,1,1),opacity .2s cubic-bezier(.4,0,.2,1);
+    opacity: $opacity;
+    vertical-align: middle;
+    border: 10px solid #404040;
+    border-radius: 2px;
+    margin: $space-2;
+
+    &.active {
+        opacity: 1;
+    }
+}
+
+.u-tile-sm {
+    width: 150px;
+    height: 150px;
+}
+
+.u-tile-lg {
+    width: 250px;
+    height: 250px;
+}
+
+@include md {
+
+    .u-tile\@md {
+        width: 200px;
+        height: 200px;
+    }
+
+    .u-tile-sm\@md {
+        width: 150px;
+        height: 150px;
+    }
+
+    .u-tile-lg\@md {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@include lg {
+
+    .u-tile\@lg {
+        width: 200px;
+        height: 200px;
+    }
+
+    .u-tile-sm\@lg {
+        width: 150px;
+        height: 150px;
+    }
+
+    .u-tile-lg\@lg {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+svg.toggle-icon {
+    //margin-top: 25%;
+}
+
+
+.u-tile--wide {
+    width: 400px;
+}

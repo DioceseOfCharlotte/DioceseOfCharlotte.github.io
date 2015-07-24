@@ -47,19 +47,17 @@
     box-shadow: none!important;
 }
 
-.shadow1 {
-  @include focus-shadow();
-}
 
-.shadow2 {
+
+.shadow1 {
   @include shadow-2dp();
 }
 
-.shadow3 {
+.shadow2 {
   @include shadow-3dp();
 }
 
-.shadow4 {
+.shadow3 {
   @include shadow-4dp();
 }
 
@@ -69,4 +67,10 @@
 
 .shadow8 {
   @include shadow-8dp();
+}
+
+.shadow-hover {
+    &:hover {
+  @include focus-shadow();
+  }
 }
