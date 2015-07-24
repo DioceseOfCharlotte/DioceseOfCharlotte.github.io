@@ -27,7 +27,14 @@
 .black  { color: $black }
 .gray   { color: $gray }
 .silver { color: $silver }
-.white  { color: $white }
+
+.white  {
+    color: $white;
+ }
+
+.white a {
+     color: white;
+ }
 
 .muted { opacity: $opacity; }
 
